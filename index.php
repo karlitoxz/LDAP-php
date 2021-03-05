@@ -15,6 +15,7 @@ if (isset($_POST["username"]) && $_POST["password"]) {
 	   else {  
 	         // realizando la autenticación
 	         $ldapbind = ldap_bind($ldap_con, $ldap_dn, $ldap_password);
+			 //añadir un @ si no queremos ver errores @ $ldapbind = @ldap_bind($lda..
 	         // verificación del enlace
 	         if ($ldapbind) {
 	            echo "LDAP bind successful...".$ldap_dn;
